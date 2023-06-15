@@ -1,3 +1,5 @@
+import com.app.aprendizadokotlin.POO.Autenticavel
+
 class Diretor(
     nome: String,
     cpf: String,
@@ -18,5 +20,4 @@ class Diretor(
         get() {
             return salario + plr
         }
-
 }

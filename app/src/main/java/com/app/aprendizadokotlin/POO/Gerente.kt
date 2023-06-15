@@ -1,3 +1,5 @@
+import com.app.aprendizadokotlin.POO.Autenticavel
+
 class Gerente(
     nome: String,
     cpf: String,
@@ -12,7 +14,6 @@ class Gerente(
 ) {
 
     // Função de bonificação
-    // Super para reuso de função da classe mãe (Funcionario)
     override val bonificacao: Double
         get() {
             return salario

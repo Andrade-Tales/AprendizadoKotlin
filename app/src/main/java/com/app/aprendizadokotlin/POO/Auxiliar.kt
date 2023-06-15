@@ -1,3 +1,5 @@
+import com.app.aprendizadokotlin.POO.Funcionario
+
 class Auxiliar(
     nome: String,
     cpf: String,

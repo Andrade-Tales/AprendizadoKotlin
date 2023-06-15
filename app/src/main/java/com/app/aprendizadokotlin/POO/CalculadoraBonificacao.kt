@@ -1,3 +1,5 @@
+import com.app.aprendizadokotlin.POO.Funcionario
+
 // Classe para soma de toda a bonificação de todos os funcionários
 class CalculadoraBonificacao {
 

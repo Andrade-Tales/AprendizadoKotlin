@@ -1,3 +1,11 @@
+package com.app.aprendizadokotlin.POO.testePOO
+
+import Cliente
+import Diretor
+import Gerente
+import SistemaInterno
+import com.app.aprendizadokotlin.POO.Autenticavel
+
 private fun testaAutenticacao() {
     val gerente = Gerente(
         nome = "Alex",
@@ -23,5 +31,6 @@ private fun testaAutenticacao() {
     val sistema = SistemaInterno()
     sistema.entra(gerente, 1000)
     sistema.entra(diretora, 2000)
-   // sistema.entra(cliente, 1234)
+    sistema.entra(cliente, 1234)
+
 }
