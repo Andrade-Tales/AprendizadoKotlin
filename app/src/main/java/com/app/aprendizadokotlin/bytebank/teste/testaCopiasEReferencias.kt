@@ -1,5 +1,5 @@
-import com.app.aprendizadokotlin.modelo.ContaCorrente
-import com.app.aprendizadokotlin.modelo.ContaPoupanca
+import com.app.aprendizadokotlin.bytebank.modelo.ContaCorrente
+import com.app.aprendizadokotlin.bytebank.modelo.ContaPoupanca
 
 fun testaCopiasEReferencias() {
     val numeroX = 10

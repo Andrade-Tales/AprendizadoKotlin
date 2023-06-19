@@ -1,6 +1,6 @@
-package com.app.aprendizadokotlin.modelo
+package com.app.aprendizadokotlin.bytebank.modelo
 
-import com.app.aprendizadokotlin.modelo.Conta
+import com.app.aprendizadokotlin.bytebank.modelo.Conta
 
 class ContaCorrente(
     titular: String,

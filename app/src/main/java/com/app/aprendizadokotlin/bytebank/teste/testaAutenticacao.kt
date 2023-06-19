@@ -1,9 +1,9 @@
-package com.app.aprendizadokotlin.POO.testePOO
+package com.app.aprendizadokotlin.bytebank.teste
 
-import com.app.aprendizadokotlin.modelo.Cliente
-import com.app.aprendizadokotlin.modelo.Diretor
-import com.app.aprendizadokotlin.modelo.Gerente
-import com.app.aprendizadokotlin.modelo.SistemaInterno
+import com.app.aprendizadokotlin.bytebank.modelo.Cliente
+import com.app.aprendizadokotlin.bytebank.modelo.Diretor
+import com.app.aprendizadokotlin.bytebank.modelo.Gerente
+import com.app.aprendizadokotlin.bytebank.modelo.SistemaInterno
 
 private fun testaAutenticacao() {
     val gerente = Gerente(

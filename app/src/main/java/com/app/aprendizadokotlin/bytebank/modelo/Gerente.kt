@@ -1,6 +1,4 @@
-package com.app.aprendizadokotlin.modelo
-
-import com.app.aprendizadokotlin.modelo.FuncionarioAdmin
+package com.app.aprendizadokotlin.bytebank.modelo
 
 class Gerente(
     nome: String,

@@ -1,7 +1,7 @@
-import com.app.aprendizadokotlin.modelo.Analista
-import com.app.aprendizadokotlin.modelo.CalculadoraBonificacao
-import com.app.aprendizadokotlin.modelo.Diretor
-import com.app.aprendizadokotlin.modelo.Gerente
+import com.app.aprendizadokotlin.bytebank.modelo.Analista
+import com.app.aprendizadokotlin.bytebank.modelo.CalculadoraBonificacao
+import com.app.aprendizadokotlin.bytebank.modelo.Diretor
+import com.app.aprendizadokotlin.bytebank.modelo.Gerente
 
 fun testaFuncionarios() {
 

@@ -1,6 +1,4 @@
-package com.app.aprendizadokotlin.modelo
-
-import com.app.aprendizadokotlin.modelo.Conta
+package com.app.aprendizadokotlin.bytebank.modelo
 
 class ContaPoupanca(
     titular: String,

@@ -1,6 +1,4 @@
-package com.app.aprendizadokotlin.modelo
-
-import com.app.aprendizadokotlin.modelo.Funcionario
+package com.app.aprendizadokotlin.bytebank.modelo
 
 // Classe para soma de toda a bonificação de todos os funcionários
 class CalculadoraBonificacao {

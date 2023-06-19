@@ -1,4 +1,4 @@
-package com.app.aprendizadokotlin.modelo
+package com.app.aprendizadokotlin.bytebank.modelo
 
 open class Analista( // Classe com.app.aprendizadokotlin.modelo.Analista OPEN para reutilização de código da classe mãe (Funcionario)
     nome: String,

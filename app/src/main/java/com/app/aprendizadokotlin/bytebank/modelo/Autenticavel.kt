@@ -1,4 +1,4 @@
-package com.app.aprendizadokotlin.modelo
+package com.app.aprendizadokotlin.bytebank.modelo
 
 interface Autenticavel { // Interfaces não contém construtores
 

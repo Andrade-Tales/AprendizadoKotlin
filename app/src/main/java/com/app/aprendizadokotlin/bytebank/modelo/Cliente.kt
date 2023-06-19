@@ -1,6 +1,4 @@
-package com.app.aprendizadokotlin.modelo
-
-import com.app.aprendizadokotlin.modelo.Autenticavel
+package com.app.aprendizadokotlin.bytebank.modelo
 
 class Cliente(
     val nome: String,

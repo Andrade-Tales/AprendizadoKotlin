@@ -1,4 +1,4 @@
-package com.app.aprendizadokotlin.modelo
+package com.app.aprendizadokotlin.bytebank.modelo
 
 abstract class Funcionario(  // Assinatura com Abstract para as classes filhas alterarem os valores da bonificação
     val nome: String,
