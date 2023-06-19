@@ -1,6 +1,6 @@
-package com.app.aprendizadokotlin.POO
+package com.app.aprendizadokotlin.modelo
 
-abstract class Funcionario( // Classe Funcionario OPEN para reutilização de código nas classes filhas
+abstract class Funcionario(  // Assinatura com Abstract para as classes filhas alterarem os valores da bonificação
     val nome: String,
     val cpf: String,
     val salario: Double
@@ -8,8 +8,7 @@ abstract class Funcionario( // Classe Funcionario OPEN para reutilização de c�
 
     // Função de bonificação transformada em uma PROPERTIE
     // Assinatura com Abstract para as classes filhas alterarem os valores da bonificação
-   abstract val bonificacao: Double
-
+    abstract val bonificacao: Double
 
 
 }

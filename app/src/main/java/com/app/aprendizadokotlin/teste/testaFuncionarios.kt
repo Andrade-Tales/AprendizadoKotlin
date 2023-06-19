@@ -1,3 +1,8 @@
+import com.app.aprendizadokotlin.modelo.Analista
+import com.app.aprendizadokotlin.modelo.CalculadoraBonificacao
+import com.app.aprendizadokotlin.modelo.Diretor
+import com.app.aprendizadokotlin.modelo.Gerente
+
 fun testaFuncionarios() {
 
     // Funcionario (cargo gerente)

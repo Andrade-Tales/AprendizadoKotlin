@@ -1,3 +1,7 @@
+package com.app.aprendizadokotlin.modelo
+
+import com.app.aprendizadokotlin.modelo.Conta
+
 class ContaPoupanca(
     titular: String,
     numero: Int

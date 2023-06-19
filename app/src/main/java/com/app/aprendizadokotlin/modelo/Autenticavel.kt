@@ -1,4 +1,4 @@
-package com.app.aprendizadokotlin.POO
+package com.app.aprendizadokotlin.modelo
 
 interface Autenticavel { // Interfaces não contém construtores
 

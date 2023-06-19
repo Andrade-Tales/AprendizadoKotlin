@@ -1,5 +1,7 @@
-import com.app.aprendizadokotlin.POO.Autenticavel
-import com.app.aprendizadokotlin.POO.Funcionario
+package com.app.aprendizadokotlin.modelo
+
+import com.app.aprendizadokotlin.modelo.Autenticavel
+import com.app.aprendizadokotlin.modelo.Funcionario
 
 abstract class FuncionarioAdmin( // Classe Funcionario ANSTRACT para reutilização de código nas classes filhas
     nome: String,
@@ -11,7 +13,7 @@ abstract class FuncionarioAdmin( // Classe Funcionario ANSTRACT para reutilizaç
     cpf = cpf,
     salario = salario
 ),
-    Autenticavel { // Classe FuncionarioAdmin herdando de Funcionario para reutilização de código nas classes filhas
+    Autenticavel { // Classe com.app.aprendizadokotlin.modelo.FuncionarioAdmin herdando de Funcionario para reutilização de código nas classes filhas
 
     // Função de autenticação
     override fun autentica(senha: Int): Boolean {

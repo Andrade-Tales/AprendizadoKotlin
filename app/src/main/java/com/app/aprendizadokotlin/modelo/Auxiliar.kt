@@ -1,4 +1,6 @@
-import com.app.aprendizadokotlin.POO.Funcionario
+package com.app.aprendizadokotlin.modelo
+
+import com.app.aprendizadokotlin.modelo.Funcionario
 
 class Auxiliar(
     nome: String,

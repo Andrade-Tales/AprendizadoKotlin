@@ -1,3 +1,6 @@
+import com.app.aprendizadokotlin.modelo.ContaCorrente
+import com.app.aprendizadokotlin.modelo.ContaPoupanca
+
 fun testaComportamentosConta() {
     val contaAlex = ContaCorrente(titular = "Alex", numero = 1000)
     contaAlex.deposita(200.0)

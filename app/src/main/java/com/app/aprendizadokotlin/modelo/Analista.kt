@@ -1,6 +1,6 @@
-import com.app.aprendizadokotlin.POO.Funcionario
+package com.app.aprendizadokotlin.modelo
 
-open class Analista( // Classe Analista OPEN para reutilização de código da classe mãe (Funcionario)
+open class Analista( // Classe com.app.aprendizadokotlin.modelo.Analista OPEN para reutilização de código da classe mãe (Funcionario)
     nome: String,
     cpf: String,
     salario: Double

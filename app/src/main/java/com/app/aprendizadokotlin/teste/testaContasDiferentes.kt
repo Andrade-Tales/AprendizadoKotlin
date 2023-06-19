@@ -1,3 +1,6 @@
+import com.app.aprendizadokotlin.modelo.ContaCorrente
+import com.app.aprendizadokotlin.modelo.ContaPoupanca
+
 private fun testaContasDiferentes() {
 
     val contaCorrente = ContaCorrente(titular = "Alex", numero = 1000)

@@ -1,3 +1,6 @@
+import com.app.aprendizadokotlin.modelo.ContaCorrente
+import com.app.aprendizadokotlin.modelo.ContaPoupanca
+
 fun testaCopiasEReferencias() {
     val numeroX = 10
     var numeroY = numeroX

@@ -1,3 +1,5 @@
+package com.app.aprendizadokotlin.modelo
+
 abstract class Conta(
     var titular: String,
     val numero: Int

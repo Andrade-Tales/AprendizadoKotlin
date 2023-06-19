@@ -1,10 +1,9 @@
 package com.app.aprendizadokotlin.POO.testePOO
 
-import Cliente
-import Diretor
-import Gerente
-import SistemaInterno
-import com.app.aprendizadokotlin.POO.Autenticavel
+import com.app.aprendizadokotlin.modelo.Cliente
+import com.app.aprendizadokotlin.modelo.Diretor
+import com.app.aprendizadokotlin.modelo.Gerente
+import com.app.aprendizadokotlin.modelo.SistemaInterno
 
 private fun testaAutenticacao() {
     val gerente = Gerente(

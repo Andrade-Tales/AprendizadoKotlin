@@ -1,4 +1,4 @@
-import com.app.aprendizadokotlin.POO.Autenticavel
+package com.app.aprendizadokotlin.modelo
 
 class Diretor(
     nome: String,

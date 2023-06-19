@@ -1,4 +1,6 @@
-import com.app.aprendizadokotlin.POO.Autenticavel
+package com.app.aprendizadokotlin.modelo
+
+import com.app.aprendizadokotlin.modelo.Autenticavel
 
 class Cliente(
     val nome: String,
