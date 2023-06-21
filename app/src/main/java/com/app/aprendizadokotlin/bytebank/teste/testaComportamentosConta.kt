@@ -1,11 +1,15 @@
+import com.app.aprendizadokotlin.bytebank.modelo.Cliente
 import com.app.aprendizadokotlin.bytebank.modelo.ContaCorrente
 import com.app.aprendizadokotlin.bytebank.modelo.ContaPoupanca
 
 fun testaComportamentosConta() {
-    val contaAlex = ContaCorrente(titular = "Alex", numero = 1000)
+
+    val alex = Cliente(nome = "Alex", cpf = "", senha = 1)
+    val contaAlex = ContaCorrente(titular = alex, numero = 1000)
     contaAlex.deposita(200.0)
 
-    val contaFran = ContaPoupanca(numero = 1001, titular = "Fran")
+    val fran = Cliente(nome = "Fran", cpf = "", senha = 2)
+    val contaFran = ContaCorrente(titular = fran, numero = 1001)
     contaFran.deposita(300.0)
 
     println(contaFran.titular)

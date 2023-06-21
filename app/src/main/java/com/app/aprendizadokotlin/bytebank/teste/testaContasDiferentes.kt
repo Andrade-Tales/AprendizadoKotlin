@@ -1,10 +1,24 @@
+import com.app.aprendizadokotlin.bytebank.modelo.Cliente
 import com.app.aprendizadokotlin.bytebank.modelo.ContaCorrente
 import com.app.aprendizadokotlin.bytebank.modelo.ContaPoupanca
+import com.app.aprendizadokotlin.bytebank.modelo.Endereco
 
-private fun testaContasDiferentes() {
+fun testaContasDiferentes() {
 
-    val contaCorrente = ContaCorrente(titular = "Alex", numero = 1000)
-    val contaPoupanca = ContaPoupanca(titular = "Fran", numero = 1001)
+    val contaCorrente =
+        ContaCorrente(
+            titular = Cliente(
+                nome = "Alex", cpf = "111.111.111-1", senha = 1,
+                endereco = Endereco(logradouro = "Rua Vergueiro")
+            ), numero = 1000
+        )
+
+    println("nome do titular: ${contaCorrente.titular.nome}")
+    println("cpf do titular: ${contaCorrente.titular.cpf}")
+    println("endereço do titular: ${contaCorrente.titular.endereco.logradouro}")
+
+    val contaPoupanca =
+        ContaPoupanca(titular = Cliente(nome = "Fran", cpf = "", senha = 2), numero = 1001)
 
     contaCorrente.deposita(1000.0)
     contaPoupanca.deposita(1000.0)
