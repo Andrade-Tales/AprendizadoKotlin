@@ -1,3 +1,5 @@
+import com.app.aprendizadokotlin.bytebank.exception.FalhaAutenticacaoException
+import com.app.aprendizadokotlin.bytebank.exception.SaldoInsuficienteException
 import com.app.aprendizadokotlin.bytebank.modelo.Cliente
 import com.app.aprendizadokotlin.bytebank.modelo.ContaCorrente
 import com.app.aprendizadokotlin.bytebank.modelo.ContaPoupanca
@@ -46,10 +48,24 @@ fun testaComportamentosConta() {
 
     println("Transferência da conta da Fran para o Alex")
 
-    if (contaFran.transfere(destino = contaAlex, valor = 300.0)) {
-        println("Transferência sucedida")
-    } else {
+    try {
+        contaFran.transfere(destino = contaAlex, valor = 250.0, senha = 2)
+        println("Transferência bem sucedida")
+
+        // Capturando erro de falha na transferência e saldo insuficiente
+    } catch (e: SaldoInsuficienteException) {
         println("Falha na transferência")
+        println("Saldo insuficiente")
+        e.printStackTrace()
+        // Capturando erro de falha na transferência e autenticação
+    } catch (e: FalhaAutenticacaoException) {
+        println("Falha na transferência")
+        println("Falha na Autenticação")
+        e.printStackTrace()
+        // Capturando erro desconhecido ou exceptions genéricas
+    } catch (e: Exception) {
+        println("Erro desconhecido")
+        e.printStackTrace()
     }
 
     println(contaAlex.saldo)
