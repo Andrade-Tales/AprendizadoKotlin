@@ -9,6 +9,7 @@ Existem três tipos de coleções em Kotlin:
 Lista
 Set
 Map
+
 A biblioteca padrão Kotlin fornece métodos para criar os objetos de list (lista), set e map.
 De acordo com o requisito, cada um deles pode ser uma:
 

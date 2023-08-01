@@ -5,6 +5,7 @@
   Em Kotlin podemos ter um set (conjunto) mutável e um set (conjunto) imutável.
 
   Set imutável
+
   Sets imutáveis são criados usando a interface Set. A interface Set herda a interface Collection.
 
   Em Kotlin, podemos criar sets imutáveis usando as funções setOf() e setOf<T>(). A função setOf()
@@ -31,11 +32,13 @@
   }
 
   Propriedades e funções dos sets
+
   Algumas funções e propriedades importantes fornecidas na interface Set são:
 
   Propriedades:
 
   size: representa o número de elementos presentes no conjunto.
+
   Funções :
 
   elementAt(index): Retorna o elemento no índice especificado no set ou lança IndexOutOfBoundsException.
@@ -78,6 +81,7 @@
       println("O set está vazio? ${languages.isEmpty()}")
 
       // Funções matemáticas
+
       println("Número de elementos no set: ${marks.count()}")
       println("Maior elemento no set: ${marks.max()}")
       println("Menor elemento no set: ${marks.min()}")
@@ -86,6 +90,7 @@
   }
 
   Set Mutável
+
   Sets mutáveis são criados usando a interface MutableSet. A interface MutableSet também herda a
   interface Collection. Sets mutáveis são dinâmicos por natureza. Podemos adicionar ou remover
    elementos do set mutável após sua declaração. Portanto, o tamanho do set mutável não é fixo.
@@ -103,7 +108,8 @@
         println(specificSet)
     }
 
-    Todas as propriedades e métodos que estão presentes em sets imutáveis também estão presentes no caso de sets mutáveis, mas os sets mutáveis têm algumas funções extras para suportar a mutabilidade:
+    Todas as propriedades e métodos que estão presentes em sets imutáveis também estão presentes no
+     caso de sets mutáveis, mas os sets mutáveis têm algumas funções extras para suportar a mutabilidade:
 
     add(element): Adiciona o elemento especificado ao set. Retorna true se o elemento foi adicionado,
     false se o elemento já está contido no set.
