@@ -1,0 +1,150 @@
+Os maps são usados para armazenar pares de chave e valor. Tanto a chave quanto o valor são definidos
+pelo usuário. Em um map:
+
+  A chave deve ser exclusiva e apenas um valor pode ser armazenado para cada chave exclusiva.
+  Os valores podem ser duplicados.
+  A chave e o valor podem ser de tipos de dados diferentes.
+  A palavra-chave to é usada para mapear uma chave para um valor.
+  Um par chave-valor também é conhecido como uma entrada.
+  Em Kotlin podemos ter um map mutável e um map imutável.
+
+  Map imutável Kotlin
+  Maps imutáveis são criados usando a interface Map<K, V>. A partir de maps imutáveis, só podemos fazer
+  leitura.
+
+   Em Kotlin, maps imutáveis são criados usando funções mapOf() e mapOf<K, V>(). Semelhante às listas,
+   a função mapOf() é usada para criar um map geral onde a chave e o valor podem ser de qualquer tipo
+   de dados. O mapOf<K, V>() é usado para criar um mapa específico com chaves e valores dos tipos de
+   dados K e V, respectivamente.
+
+   Exemplo:
+
+   fun main(args: Array<String>) {
+       val generalMap = mapOf("Rank" to 1, 1 to "Primeiro", 'A' to "Excelente")
+       val specificMap = mapOf<String, Int>("Física" to 80, "Matemática" to 97, "C++" to 89)
+       println(generalMap)
+       println(specificMap)
+   }
+
+  É possível percorrer esses maps usando for e forEach:
+
+  Exemplo:
+
+  fun main(args: Array<String>) {
+      val generalMap = mapOf("Rank" to 1, 1 to "Primeiro", 'A' to "Excelente")
+      val specificMap = mapOf<String, Int>("Física" to 80, "Matemática" to 97, "C++" to 89)
+      for ((k,v) in generalMap) {
+          println("A Chave é $k e o Valor é $v")
+      }
+      specificMap.forEach { (k, v) ->
+          println("A chave é $k e o Valor é $v")
+      }
+  }
+
+   Propriedades e funções do map
+   Algumas funções e propriedades importantes fornecidas na interface Map são:
+
+   Propriedades:
+
+   size: Retorna o tamanho do map.
+   entries: retorna o conjunto de todos os pares de chave-valor no map.
+   keys: Retorna o conjunto de todas as chaves no map.
+   values: Retorna o conjunto de todos os valores no map.
+
+   Funções:
+
+   get(key): Retorna o valor da chave correspondente. Se a chave estiver ausente, retornará null.
+   getValue(key): Retorna o valor para a chave fornecida ou lança NoSuchElementException se não
+   houver tal chave no map.
+   contains(key): Retorna true se o map contiver a chave especificada senão retorna false.
+   containsKey(key): Retorna true se o map contiver a chave especificada senão retorna false.
+   Esta função é a mesma que a anterior.
+   containsValue(value): Retorna true se houver uma ou mais chaves para o valor especificado
+   presente no map.
+   getOrDefault(key, defaultValue): Retorna o valor correspondente à chave, ou defaultValue se tal
+    chave não estiver presente no map.
+
+    Exemplo:
+
+    fun main(args: Array<String>) {
+        val marks = mapOf<String, Int>("Física" to 80, "Matemática" to 97, "C++" to 89, "Química" to 95)
+
+        // Propriedades
+        println("Tamanho do map: ${marks.size}")
+        println("Conjunto de entradas: ${marks.entries}")
+        println("Conjunto de chaves: ${marks.keys}")
+        println("Conjunto de valores: ${marks.values}")
+
+        // Funções
+        println("Notas em Física: ${marks.get("Physics")}")
+        println("Notas em Inglês: ${marks["English"]}")
+        println("Notas em Matemática: ${marks.getValue("Maths")}")
+
+        println("O map contém Física? ${marks.containsKey("Physics")}")
+        println("O map contém C++? ${marks.contains("C++")}")
+        println("O map contém Química? ${"Chemistry" in marks}")
+
+        println("Alguma matéria tem notas 100? ${marks.containsValue(100)}")
+
+        println("Notas em inglês: ${marks.getOrDefault("English",0)}")
+    }
+
+    Map Mutável
+    Os maps mutáveis são criados usando a interface MutableMap. Os maps mutáveis suportam a natureza
+     dinâmica. Podemos adicionar ou remover ou atualizar entradas do map mutável após sua declaração.
+     Portanto, o tamanho do map mutável não é fixo.
+
+    Maps mutáveis são criados usando funções mutableMapOf() e mutableMapOf<K, V>().
+     A função mutableMapOf() é usada para criar um mapa generalizado e a mutableMapOf<K, V>() é
+      usada para criar um map de chave e valor de tipos específicos.
+
+      Exemplo:
+
+      fun main(args: Array<String>) {
+          val generalMap = mutableMapOf("Rank" to 1, 1 to "Primeiro", 'A' to "Excelente")
+          val specificMap = mutableMapOf<String, Int>("Física" to 80, "Matemática" to 97, "C++" to 89)
+          println(generalMap)
+          println(specificMap)
+      }
+
+      Podemos percorrer maps mutáveis da mesma forma que percorremos maps imutáveis.
+
+      Todas as propriedades e funções que estão presentes em maps imutáveis também estão presentes
+      no caso de maps mutáveis. Os maps mutáveis têm algumas funções extras para suportar a natureza
+       dinâmica. Elas são:
+
+      put(key, value): adiciona o par chave-valor especificado ao map. Se a chave já existir,
+      o valor desse novo par substituirá o valor antigo.
+      putIfAbsent(key, value): adiciona o par chave-valor especificado ao map somente se a chave não
+       existir anteriormente.
+      replace(key, newValue): Substitui o valor da chave especificada pelo novo valor.
+      replace(key, oldValue, newValue): substitui o valor antigo pelo novo valor para a
+      chave especificada somente se o par key e oldValue existir.
+      remove(key): Remove a entrada com a chave especificada do map.
+      remove(key, value): Remove a entrada do map se existir uma entrada com a chave e o valor
+      especificados.
+      clear(): remove todas as entradas do map.
+
+      Exemplo:
+
+      fun main(args: Array<String>) {
+          val marks = mutableMapOf<String, Int>("Física" to 80, "Matemática" to 97, "C++" to 89, "Química" to 95)
+
+          marks.put("C++", 92)
+          println(marks)
+          marks["Química"] = 93
+          println(marks)
+          marks.putIfAbsent("Inglês", 95)
+          marks.putIfAbsent("Física", 0)
+          println(marks)
+          marks.replace("Matemática", 70)
+          println(marks)
+          marks.replace("Matemática", 70, 95)
+          println(marks)
+          marks.remove("C++")
+          println(marks)
+          marks.remove("Matemática", 95)
+          println(marks)
+          marks.clear()
+          println(marks)
+      }

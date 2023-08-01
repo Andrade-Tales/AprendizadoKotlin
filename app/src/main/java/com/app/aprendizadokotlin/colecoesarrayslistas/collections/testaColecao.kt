@@ -1,8 +1,9 @@
 package com.app.aprendizadokotlin.colecoesarrayslistas.collections
 
  fun testaColecao() {
+
      // MutableIterable tem referências mais restritas. No MutableCollection não, existe referências
-     // restritas menos
+     // menos restritas
     val nomes: MutableCollection<String> = mutableListOf(
         "Lucas",
         "Fran",

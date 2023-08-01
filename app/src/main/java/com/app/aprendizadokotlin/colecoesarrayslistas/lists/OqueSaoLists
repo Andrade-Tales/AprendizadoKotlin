@@ -1,0 +1,136 @@
+Listas (lists) são:
+
+ Uma coleção ordenada de elementos.
+ A ordem é mantida através de índices (como acontece com os arrays).
+ Um elemento pode ocorrer mais de uma vez em uma lista.
+ A lista mutável pode ser considerada um array dinâmico cujo tamanho pode ser alterado.
+ Em Kotlin podemos ter uma lista mutável e uma lista imutável.
+
+ Lista imutável
+ Listas imutáveis são criadas usando a interface List. A interface List herda a interface
+ Collection<T>. Ela contém muitas funções úteis como contains(), indexOf(), isEmpty(), etc.
+
+ Em Kotlin, podemos criar uma lista imutável usando funções listOf() e listOf<T>(). A função listOf()
+ é usada para criar uma lista geral que pode ter qualquer objeto como Integers, Strings, Floats etc.
+  A função listOf<T>() é usada para criar uma lista de tipo específico.
+
+  Vamos criar uma lista usando essas duas funções no exemplo abaixo.
+
+  Exemplo:
+
+  fun main(args: Array<String>) {
+      var genericList = listOf("Ninja", 10, 1.05f, 'a')
+      var specificList = listOf<String>("Ninja", "Study", "tonight")
+      println("Imprimindo $genericList")
+      println("Imprimindo $specificList")
+  }
+
+  Percorrer uma lista:
+  Para percorrer uma lista podemos utilizar o for, como no exemplo abaixo.
+
+  Exemplo:
+
+  fun main(args: Array<String>) {
+      val list = listOf<String>("Ninja", "Study", "tonight", "Ninja", "Kotlin")
+      // printing list
+      for (element in list)
+          println(element)
+
+
+  Funções e propriedades da lista
+  Algumas funções e propriedades importantes fornecidas na interface List são:
+
+  Propriedades:
+
+  size: representa o número de elementos presentes na lista.
+  lastIndex: representa o índice do último elemento da lista.
+  Funções:
+
+  get(index): Retorna o elemento no índice especificado na lista ou lança IndexOutOfBoundsException.
+  contains(element): Retorna verdadeiro se o elemento existir na lista ou retorna falso.
+  indexOf(element): Retorna o índice da primeira ocorrência do elemento especificado na lista, ou -1
+   se o elemento especificado não estiver contido na lista.
+  lastIndexOf(element): Retorna o índice da última ocorrência do elemento especificado na lista, ou
+  -1 se o elemento especificado não estiver contido na lista.
+  first(): Retorna o primeiro elemento na lista ou lança NoSuchElementException se a lista estiver
+  vazia.
+  last(): Retorna o último elemento da lista ou lança NoSuchElementException se a lista estiver
+  vazia.
+  isEmpty(): Retorna verdadeiro se a lista estiver vazia, senão falso.
+  subList(start, end): Retorna uma sublista entre o início (inclusivo) e o final (exclusivo).
+
+  Exemplo:
+
+  fun main(args: Array<String>) {
+      val list = listOf<String>("Ninja", "Study", "tonight", "Ninja", "Kotlin")
+      // Propriedades
+      println("O tamanho da lista é: ${list.size}")
+      println("O índice do último elemento é: ${list.lastIndex}")
+
+      // Funções
+      println("O elemento no índice 2 é: ${list.get(2)}")
+      println("O elemento no índice 3 é: ${list[3]}")     // Other way to get an element
+
+      println("Ninja existe na lista? ${list.contains("Ninja")}")
+      println("Existe Hatori na lista? ${list.contains("Hatori")}")
+
+      println("O primeiro índice de Ninja é: ${list.indexOf("Ninja")}")
+      println("O primeiro índice de Hatori é: ${list.indexOf("Hatori")}")
+
+      println("O último índice de Ninja é: ${list.lastIndexOf("Ninja")}")
+      println("O último índice de Hatori é: ${list.lastIndexOf("Hatori")}")
+
+      println("Primeiro elemento da lista: ${list.first()}")
+      println("Último elemento da lista: ${list.last()}")
+
+      println("A lista está vazia? ${list.isEmpty()}")
+
+      println("Sublista do índice 1 a 3 ${list.subList(1,3)}")
+
+  }
+
+  Lista Mutável
+  As listas mutáveis são criadas usando a interface MutableList. A interface MutableList também herda a interface Collection. As listas mutáveis são dinâmicas por natureza. Podemos adicionar ou remover elementos da lista mutável após sua declaração. Portanto, o tamanho da lista mutável não é fixo.
+
+  Semelhante às listas imutáveis, as listas mutáveis são criadas usando as funções mutableListOf() e mutableListOf<T>(). A função mutableListOf() é usada para criar uma lista geral que pode ter qualquer objeto como Integers, Strings, Floats etc. A função mutableListOf<T>() é usada para criar uma lista de tipo específico.
+
+  Vamos criar listas mutáveis usando estes métodos no exemplo abaixo.
+
+  Exemplo:
+
+  fun main(args: Array<String>) {
+      var genericList = mutableListOf("Ninja", 10, 1.05f, 'a')
+      var specificList = mutableListOf<String>("Ninja", "Study", "tonight")
+      println("Imprimindo $genericList")
+      println("Imprimindo $specificList")
+  }
+
+  Todas as propriedades e métodos que estão presentes em listas imutáveis também estão presentes nas
+   listas mutáveis, mas as listas mutáveis têm algumas funções extras para suportar a mutabilidade:
+
+  add(element): Adiciona o elemento especificado ao final da lista.
+  add(index, element): Insere um elemento na lista no índice especificado.
+  remove(element): Remove a primeira ocorrência do elemento da lista.
+  removeAt(index): Remove um elemento no índice especificado da lista.
+  set(index, element): Substitui o elemento no índice especificado nesta lista pelo elemento
+  especificado.
+  clear(): remove todos os elementos da lista.
+
+  Exemplo usando estes métodos:
+
+  fun main(args: Array<String>) {
+      val list = mutableListOf<String>("Ninja", "Study", "tonight", "Ninja", "Kotlin")
+      // New Functions
+      list.add("Java")
+      println(list)
+      list.add(2, "C++")
+      println(list)
+      list.remove("Ninja")
+      println(list)
+      list.removeAt(1)
+      println(list)
+      list.set(1, "PHP")
+      println(list)
+      list.clear()
+      println(list)
+  }

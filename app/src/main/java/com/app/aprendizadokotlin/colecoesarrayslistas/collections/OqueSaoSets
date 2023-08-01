@@ -1,0 +1,124 @@
+  Sets (ou conjuntos) são:
+
+  Uma coleção desordenada de elementos.
+  Elementos duplicados não são permitidos nos sets.
+  Em Kotlin podemos ter um set (conjunto) mutável e um set (conjunto) imutável.
+
+  Set imutável
+  Sets imutáveis são criados usando a interface Set. A interface Set herda a interface Collection.
+
+  Em Kotlin, podemos criar sets imutáveis usando as funções setOf() e setOf<T>(). A função setOf()
+  é usada para criar um set geral que pode ter qualquer objeto como Integers, Strings, Floats etc.
+  A função setOf<T>() é usada para criar um set de tipo específico.
+
+  Exemplo:
+
+  fun main(args: Array<String>) {
+      val genericSet = setOf("Hello", 1, "Bye", 'A', "Hello")
+      val specificSet = setOf<String>("C++", "Maths", "English")
+      println(genericSet)
+      println(specificSet)
+  }
+
+  Para percorrer um set podemos utilizar um for.
+
+  Exemplo:
+
+  fun main(args: Array<String>) {
+      val genericSet = setOf("Hello", 1, "Bye", 'A', "Hello")
+      for (item in genericSet)
+          println(item)
+  }
+
+  Propriedades e funções dos sets
+  Algumas funções e propriedades importantes fornecidas na interface Set são:
+
+  Propriedades:
+
+  size: representa o número de elementos presentes no conjunto.
+  Funções :
+
+  elementAt(index): Retorna o elemento no índice especificado no set ou lança IndexOutOfBoundsException.
+  contains(element): Retorna true se o elemento existe no set ou retorna false.
+  indexOf(element): Retorna o índice do elemento especificado no set, ou -1 se o elemento especificado
+   não estiver presente no set.
+  lastIndexOf(element): Retorna o índice da última ocorrência (ou a única ocorrência) do elemento
+   especificado no set, ou -1 se o elemento especificado não estiver presente no set.
+  first(): Retorna o primeiro elemento no set ou lança NoSuchElementException se o set estiver vazio.
+  last(): Retorna o último elemento do set ou lança NoSuchElementException se o set estiver vazio.
+  isEmpty(): Retorna true se o set estiver vazio, se não estiver retorna false.
+  count(): Retorna o número de elementos nesta coleção.
+  max(): Retorna o maior elemento ou null se não houver elementos.
+  min(): Retorna o menor elemento ou null se não houver elementos.
+  sum(): Retorna a soma de todos os elementos desta coleção.
+  average(): Retorna a média de todos os elementos nesta coleção.
+
+  Exemplo:
+
+  fun main(args: Array<String>) {
+      val languages = setOf<String>("Kotlin", "C++", "C", "Java", "Angular", "Kotlin")
+      val marks = setOf<Int>(95,96,94,90)
+
+      // Propriedades
+      println("O tamanho do set é: ${languages.size}")
+
+      // Funções
+      println("Java existe no set? ${languages.contains("Java")}")
+      println("PHP existe no set? ${languages.contains("PHP")}")
+      println("Elemento no índice 1: ${languages.elementAt(1)}")
+
+      println("O índice do Kotlin é: ${languages.indexOf("Kotlin")}")
+      println("O índice do PHP é: ${languages.indexOf("PHP")}")
+
+      println("O último índice do Kotlin é: ${languages.lastIndexOf("Kotlin")}")
+
+      println("Primeiro elemento no set: ${languages.first()}")
+      println("Último elemento no set: ${languages.last()}")
+
+      println("O set está vazio? ${languages.isEmpty()}")
+
+      // Funções matemáticas
+      println("Número de elementos no set: ${marks.count()}")
+      println("Maior elemento no set: ${marks.max()}")
+      println("Menor elemento no set: ${marks.min()}")
+      println("Soma dos elementos no set: ${marks.sum()}")
+      println("Média de elementos no set: ${marks.average()}")
+  }
+
+  Set Mutável
+  Sets mutáveis são criados usando a interface MutableSet. A interface MutableSet também herda a
+  interface Collection. Sets mutáveis são dinâmicos por natureza. Podemos adicionar ou remover
+   elementos do set mutável após sua declaração. Portanto, o tamanho do set mutável não é fixo.
+
+  Semelhante aos sets imutáveis, os sets mutáveis são criados usando as funções mutableSetOf()
+   e mutableSetOf<T>(). A função mutableSetOf() é usada para criar um set geral enquanto
+    mutableSetOf<T>() é usada para criar um set de tipo específico.
+
+    Exemplo:
+
+    fun main(args: Array<String>) {
+        val generalSet = mutableSetOf("Kotlin", 10, 1.0f, 'A', "Kotlin")
+        val specificSet = mutableSetOf<String>("Kotlin", "C++", "C", "Java", "Angular", "Kotlin")
+        println(generalSet)
+        println(specificSet)
+    }
+
+    Todas as propriedades e métodos que estão presentes em sets imutáveis também estão presentes no caso de sets mutáveis, mas os sets mutáveis têm algumas funções extras para suportar a mutabilidade:
+
+    add(element): Adiciona o elemento especificado ao set. Retorna true se o elemento foi adicionado,
+    false se o elemento já está contido no set.
+    remove(element): Remove o elemento do set.
+    clear(): Remove todos os elementos do set.
+
+    Exemplo:
+
+    fun main(args: Array<String>) {
+        val languages = mutableSetOf<String>("Kotlin", "C++", "C", "Java", "Kotlin")
+        println(languages)
+        languages.add("Angular")
+        println(languages)
+        languages.remove("Java")
+        println(languages)
+        languages.clear()
+        println(languages)
+    }
