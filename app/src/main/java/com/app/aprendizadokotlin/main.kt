@@ -1,14 +1,14 @@
-package com.app.aprendizadokotlin.colecoesarrayslistas
+package com.app.aprendizadokotlin
 
-import com.app.aprendizadokotlin.paradigmafuncional.testaImplementacaoComLet
-import com.app.aprendizadokotlin.paradigmafuncional.testaTipoFuncaoAnonima
-import com.app.aprendizadokotlin.paradigmafuncional.testaTipoFuncaoLambda
-
+import com.app.aprendizadokotlin.paradigmafuncional.testaHighOrderFunction
 
 fun main() {
-  testaImplementacaoComLet()
+
+    testaHighOrderFunction()
 
 }
+
+
 
 
 

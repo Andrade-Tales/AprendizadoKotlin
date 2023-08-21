@@ -21,7 +21,6 @@ abstract class Conta(
     }
 
     init { // Incrementando cada conta criada para contabilizar contas
-        println("Criando conta")
         total++
     }
 

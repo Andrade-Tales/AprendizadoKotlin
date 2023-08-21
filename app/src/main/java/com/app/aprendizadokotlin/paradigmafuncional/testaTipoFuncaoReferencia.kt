@@ -5,7 +5,7 @@ fun testaTipoFuncaoReferencia() {
     println(minhaFuncao(5, 10))
 }
 
-// retorno sendo um inteiro
+ //retorno sendo um inteiro
 fun soma(a: Int, b: Int): Int {
     return a + b
 }
